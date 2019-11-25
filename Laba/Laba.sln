@@ -3,30 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba", "Laba.csproj", "{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba", "Laba.csproj", "{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpSimplexMethod", "..\FSharpSimplexMethod\FSharpSimplexMethod.fsproj", "{58EC83E1-1F36-482F-AE1E-245A752FDDAB}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FSharpSimplexMethod", "..\FSharpSimplexMethod\FSharpSimplexMethod.fsproj", "{58EC83E1-1F36-482F-AE1E-245A752FDDAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSimplexMethod", "..\TestSimplexMethod\TestSimplexMethod.csproj", "{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSimplexMethod", "..\TestSimplexMethod\TestSimplexMethod.csproj", "{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Debug|x64.ActiveCfg = Debug|x64
+		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Debug|x64.Build.0 = Debug|x64
 		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Release|x64.ActiveCfg = Release|x64
+		{322AA2C8-84AF-4EAF-A1D2-5E7A4723D696}.Release|x64.Build.0 = Release|x64
 		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Debug|x64.ActiveCfg = Debug|x64
+		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Debug|x64.Build.0 = Debug|x64
 		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Release|x64.ActiveCfg = Release|x64
+		{58EC83E1-1F36-482F-AE1E-245A752FDDAB}.Release|x64.Build.0 = Release|x64
 		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Debug|x64.ActiveCfg = Debug|x64
+		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Debug|x64.Build.0 = Debug|x64
 		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Release|x64.ActiveCfg = Release|x64
+		{F1617156-A773-4C8E-8E07-7E0D1D75B4C6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

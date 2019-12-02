@@ -6,32 +6,113 @@
         xmlns:local="clr-namespace:Laba"
         xmlns:viewModels ="clr-namespace:Laba.ViewModels"
         mc:Ignorable="d"
-        Title="Численные методы" MinHeight="450" MinWidth="800" 
-        SizeToContent="WidthAndHeight" 
-        WindowStartupLocation="CenterScreen">
+        Title="Численные методы" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.DataContext>
         <viewModels:ViewModels/>
     </Window.DataContext>
 
     <TabControl>
-        <TabItem Header="Симплекс-метод" 
+        <TabItem Header="Симплекс-метод"
                  Style="{StaticResource TabItemStyle}">
-            <Grid HorizontalAlignment="Left">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0" 
-                            x:Name="Menu"
-                            Background="Green"
-                            Style="{StaticResource MenuStackPanel}" RenderTransformOrigin="0.5,0.5">
+           <DockPanel>
+               <TabControl TabStripPlacement="Right" DockPanel.Dock="Right">
+                   <TabControl.Resources>
+                       <Style TargetType="{x:Type TabItem}">
+                           <Setter Property="HeaderTemplate">
+                               <Setter.Value>
+                                   <DataTemplate>
+                                       <ContentPresenter Content="{TemplateBinding Content}">
+                                           <ContentPresenter.LayoutTransform>
+                                               <RotateTransform Angle="90" />
+                                           </ContentPresenter.LayoutTransform>
+                                       </ContentPresenter>
+                                   </DataTemplate>
+                               </Setter.Value>
+                           </Setter>
+                           <Setter Property="Padding" Value="5" />
+                       </Style>
+                   </TabControl.Resources>
+                   <TabItem Header="Настройки">
+                       <DockPanel>
+                           <Label Content="Пользовательские настройки"
+                                  DockPanel.Dock="Top" HorizontalAlignment="Center"></Label>
+                           <DockPanel DockPanel.Dock="Bottom">
+                               <CheckBox DockPanel.Dock="Top" 
+                                         Content="Формирования отчета" HorizontalContentAlignment="Left" HorizontalAlignment="Center" FlowDirection="LeftToRight" ClickMode="Press" AutomationProperties.IsOffscreenBehavior="Default"></CheckBox>
+                               <StackPanel 
+                                   DockPanel.Dock="Left" 
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Stretch"
+                                   Height="250"
+                                    FlowDirection="LeftToRight">
+                                   <Label Height="25" Content="Путь сохранения отчета:" HorizontalContentAlignment="Right"></Label>
+                                   <Label  Height="25" Content="Формат отчета:" HorizontalContentAlignment="Right"></Label>
+                               </StackPanel>
+                               <StackPanel DockPanel.Dock="Right">
+                                   <StackPanel.Resources>
+                                       <Style TargetType="TextBox">
+                                           <Setter 
+                                               Property="BorderThickness"
+                                               Value="0,0,0,1"/>
+                                           <Setter Property="HorizontalAlignment"
+                                                   Value="Stretch"></Setter>
+                                           <Setter Property="VerticalAlignment"
+                                                   Value="Center"></Setter>
+                                           <Setter Property="VerticalContentAlignment"
+                                                   Value="Center"></Setter>
+                                       </Style>
+                                   </StackPanel.Resources>
+                                   <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                       <TextBox DockPanel.Dock="Left" Height="25" Width="500"/>
+                                       <Button DockPanel.Dock="Right" Content="Обзор"/>
+                                    </DockPanel>
+                                   <DockPanel Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                       <RadioButton DockPanel.Dock="Left" Content=".txt" Margin="0,5,15,0"></RadioButton>
+                                       <RadioButton DockPanel.Dock="Left" Content=".docx" Margin="0,5,0,0"></RadioButton>
+                                    </DockPanel>
+                                </StackPanel>
 
-                    <Button Content="Расчет" 
-                            RenderTransformOrigin="0.5,0.5"
-                            Style="{StaticResource ButtonMenu}"/>
-                </StackPanel>
+                            </DockPanel>
+                            <Label Content="Настройки программы"
+                                  DockPanel.Dock="Bottom" 
+                                  HorizontalAlignment="Center"></Label>
+                           
+                            <DockPanel>
+                                <StackPanel 
+                               DockPanel.Dock="Left" 
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Top"
+                               Width="100" FlowDirection="LeftToRight"
+                               Height="100">
+                               <Label Height="25" Content="Студент:" HorizontalContentAlignment="Right"></Label>
+                               <Label  Height="25" Content="Группа:" HorizontalContentAlignment="Right"></Label>
+                            </StackPanel>
+                           <StackPanel DockPanel.Dock="Right" Height="100" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                               <StackPanel.Resources>
+                                   <Style TargetType="TextBox">
+                                       <Setter 
+                                           Property="BorderThickness"
+                                           Value="0,0,0,1"/>
+                                       <Setter Property="HorizontalAlignment"
+                                               Value="Stretch"></Setter>
+                                       <Setter Property="VerticalAlignment"
+                                               Value="Center"></Setter>
+                                       <Setter Property="VerticalContentAlignment"
+                                               Value="Center"></Setter>
+                                   </Style>
+                               </StackPanel.Resources>
+                               <TextBox Height="25"/>
+                               <TextBox Height="25"/>
+                           </StackPanel>
 
-            </Grid>
+                            </DockPanel>
+                       </DockPanel>
+                   </TabItem>
+                   <TabItem Header="Графический ввод" />
+                   <TabItem Header="Аналитический ввод" />
+               </TabControl>
+            </DockPanel>
 
         </TabItem>
     </TabControl>

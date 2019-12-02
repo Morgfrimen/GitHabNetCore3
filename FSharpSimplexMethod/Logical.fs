@@ -158,12 +158,12 @@ module public Logical
         //printfn "Отыграл Пункт 3" 
 
     //[<EntryPoint>]
-    let public StartProgram (A,Zn,B,C):System.Collections.ArrayList =
+    let public StartProgram (A,Zn,B,C,z):System.Collections.ArrayList =
         MatrixA<-A
         Znak<-Zn
         VecB<-B
         VecC<-C
-        Z<-0.0
+        Z<-z
         W<-0.0
         D<-null
         ArrayBazResult<-null

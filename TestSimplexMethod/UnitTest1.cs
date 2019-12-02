@@ -101,6 +101,59 @@ namespace TestSimplexMethod
             {
                 Assert.AreEqual(expected [ex], actual [ex], 1);
             }
+
+
+            //Курсовая работа, пример с трафиком
+            FS.VecB = new Double [] { 16, 10 , 8};
+            FS.MatrixA = new Double [,]
+            {
+                {1,0,0.5},
+                {0,1,0.4},
+            };
+            FS.VecC = new double [] { 1, 1 };
+            FS.Znak = new string [] { "<", "<","<" };
+            result = FS.StartProgram();
+
+            //Проверка Z
+            Assert.AreEqual((double)result [3], 15, 1);
+            //Проверка итоговых значений X
+            Array.Sort((Int32 [])result [4]); //просто в начале нужно указать интересующие Х
+            testRes = new [] { 1, 2 };
+            Assert.AreEqual(result [4], testRes);
+
+            expected = (double [])result [1];
+            actual = new double [] { 1, 5 };
+            for (int ex = 0; ex < expected.Length; ex++)
+            {
+                Assert.AreEqual(expected [ex], actual [ex], 1);
+            }
+
+            //TODO: всё- таки нужно запилить ввод значения Z фукнции
+            //Пример из файла с цехом
+            FS.VecB = new Double [] { 50, 20 , 60};
+            FS.MatrixA = new Double [,]
+            {
+                {1,0,1},
+                {0,1,2},
+            };
+            FS.VecC = new double [] { 2, 1 };
+            FS.Znak = new string [] { "<", "<", "<" };
+            result = FS.StartProgram();
+
+            //Проверка Z
+            Assert.AreEqual((double)result [3], 15, 1);
+            //Проверка итоговых значений X
+            Array.Sort((Int32 [])result [4]); //просто в начале нужно указать интересующие Х
+            testRes = new [] { 1, 2 };
+            Assert.AreEqual(result [4], testRes);
+
+            expected = (double [])result [1];
+            actual = new double [] { 1, 5 };
+            for (int ex = 0; ex < expected.Length; ex++)
+            {
+                Assert.AreEqual(expected [ex], actual [ex], 1);
+            }
+
         }
     }
 }
